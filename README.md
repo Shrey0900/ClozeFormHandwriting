@@ -39,19 +39,25 @@ This dataset can be used for:
 ```bash
 git clone https://github.com/Shrey0900/ClozeFormHandwriting.git
 cd ClozeFormHandwriting/data
+```
 
+## Load images with labels in Python
+```python
 import pandas as pd
 from PIL import Image
-import os
+from pathlib import Path
 
-# Load log file (train or test)
-log_test = pd.read_csv("log_test.txt")
+root = Path("data")
+log = pd.read_csv(root / "log_test.txt")   # or "log_train.txt"
 
-# Example: read images with ground-truth labels
-for _, row in log_test.iterrows():
-    img_path = row["file_name"]
+for _, row in log.iterrows():
+    img_path = root / row["file_name"]     # e.g., data/test/6_Control.png
     label = row["text"]
+    img = Image.open(img_path)
+    print(img_path, "->", label)
+
     img = Image.open(os.path.join("..", img_path))
     print(img_path, "->", label)
+```
 
 
