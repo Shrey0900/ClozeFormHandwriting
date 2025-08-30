@@ -59,5 +59,18 @@ for _, row in log.iterrows():
     img = Image.open(os.path.join("..", img_path))
     print(img_path, "->", label)
 ```
+## 📊 Citation
+If you use this dataset in your research, please cite:
+
+```bibtex
+@inproceedings{chandola2025far,
+  title={How far are we from Automatic Grading of Handwritten Cloze Form Questions?},
+  author={Chandola, Shrey and Ravikiran, Manikandan and Saluja, Rohit},
+  booktitle={International Conference on Artificial Intelligence in Education},
+  pages={336--343},
+  year={2025},
+  organization={Springer}
+}
+```
 
 
