@@ -1,0 +1,27 @@
+# CITATION.cff
+cff-version: 1.2.0
+message: If you use this dataset, please cite the paper below.
+title: ClozeFormHandwriting Dataset
+authors:
+  - family-names: Chandola
+    given-names: Shrey
+  - family-names: Ravikiran
+    given-names: Manikandan
+  - family-names: Saluja
+    given-names: Rohit
+repository-code: https://github.com/Shrey0900/ClozeFormHandwriting
+preferred-citation:
+  type: conference-paper
+  title: How far are we from Automatic Grading of Handwritten Cloze Form Questions?
+  authors:
+    - family-names: Chandola
+      given-names: Shrey
+    - family-names: Ravikiran
+      given-names: Manikandan
+    - family-names: Saluja
+      given-names: Rohit
+  year: 2025
+  collection-title: International Conference on Artificial Intelligence in Education
+  start: 336
+  end: 343
+  publisher: Springer
