@@ -1,9 +1,25 @@
-# ClozeFormHandwriting
+# Cloze-Form Handwriting Dataset (Bad-Handwriting Benchmark)
 
-## 📖 Overview  
-**ClozeFormHandwriting** is a dataset of **handwritten cloze-form answers**, collected for research on handwriting recognition, OCR robustness, and automatic grading.  
+This dataset contains handwritten **single-word responses** collected from real classroom settings, where students answered cloze-form questions by writing one word per blank. Each image is a cropped handwritten response paired with its ground-truth transcription.
 
-The dataset contains both **image samples** (train/test) and their corresponding **log files** that map image filenames to ground-truth text.
+The handwriting exhibits substantial variation in **legibility**, **stroke quality**, **spacing**, and **letter formation**, making it a challenging benchmark for OCR systems and a realistic testbed for studying automated grading robustness.
+
+---
+
+## Dataset Contents (Current Release)
+
+The full benchmark originally consists of **5,000 handwritten responses**, but these fall into two categories:
+
+- **3,000 correct responses** — the student wrote the intended target word.  
+- **2,000 incorrect responses** — the student wrote a wrong or unrelated word.
+
+### Current Release
+
+**This public release includes only the 3,000 correct responses.**
+
+These samples are suitable for **word-level OCR training and evaluation** because each image aligns cleanly with a single target word. The remaining 2,000 responses correspond to incorrect answers and are *not* included in this release, as they require a different evaluation protocol (grading/semantic correctness) and are not directly compatible with standard OCR objectives.
+
+A small number of visually duplicated or low-quality crops were removed during preprocessing to ensure data consistency.
 
 ---
 
