@@ -19,26 +19,33 @@ The full benchmark originally consists of **5,000 handwritten responses**, but t
 
 These samples are suitable for **word-level OCR training and evaluation** because each image aligns cleanly with a single target word. The remaining 2,000 responses correspond to incorrect answers and are *not* included in this release, as they require a different evaluation protocol (grading/semantic correctness) and are not directly compatible with standard OCR objectives.
 
-A small number of visually duplicated or low-quality crops were removed during preprocessing to ensure data consistency.
-
 ---
 
-## 📂 Dataset Structure  
-
+## 📂 Dataset Structure
 
 - **Images**: stored as `.png` files  
-  - Filenames are in the format `<ID>_<Word>.png`  
-  - Example: `6_Control.png` → ground-truth word = `Control`  
-- **Logs**: CSV-formatted text files that map filenames to text  
-  - Example rows from `log_test.txt`:  
+  - Filenames follow the pattern:  
+    ```text
+    <StyleID>_<Word>.png
     ```
-    file_name,text
-    test/6_Control.png,Control
-    test/6_Scientist.png,Scientist
-    test/2_Synchronicity.png,Synchronicity
-    ```
+  - `<StyleID>` ∈ {1, 2, 3, 4, 5, 6} denotes the **handwriting group / style ID**  
+    (each ID corresponds to a different handwriting style for the same target word).  
+  - Example:  
+    ```text
+    6_Control.png
+    ```  
+    Here, `6` is the handwriting group ID and the ground-truth word is `Control`.
 
----
+- **Logs**: CSV-formatted text files mapping filenames to their transcriptions  
+  - Example rows from `log_test.txt`:
+    ```text
+    file_name,text
+    6_Control.png,Control
+    2_Molecule.png,Molecule
+    4_Retrovirus.png,Retrovirus
+    ```
+  - These logs are used to load image–text pairs for training and evaluation.
+
 
 ## 🧑‍🏫 Use Cases  
 This dataset can be used for:  
