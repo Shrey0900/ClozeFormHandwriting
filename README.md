@@ -1,3 +1,7 @@
+## License
+The dataset (images and annotations) is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+See the `LICENSE` file for details.
+
 # Cloze-Form Handwriting Dataset (Bad-Handwriting Benchmark)
 
 This dataset contains handwritten **single-word responses** collected from real classroom settings, where students answered cloze-form questions by writing one word per blank. Each image is a cropped handwritten response paired with its ground-truth transcription.
